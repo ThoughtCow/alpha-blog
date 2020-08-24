@@ -1,2 +1,20 @@
 <% @head = "Articles - " %>
 <h1 class="arial">All articles</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Article</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.created_at %></td>
+      <td><p>placeholder</p></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

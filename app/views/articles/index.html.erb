@@ -1,22 +1,24 @@
 <% @head = "Articles - " %>
-<h1 class="arial">All articles</h1>
-<a href="https://maya-dog-walking.herokuapp.com/details" class="button arial">Create a new article</a>
-<p> </p>
-<table>
-  <thead>
-    <tr>
-      <th>Article</th>
-      <th>Created at</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.created_at %></td>
-      <td><p>placeholder</p></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="arial">
+  <h1>All articles</h1>
+  <a href="https://maya-dog-walking.herokuapp.com/details" class="button">Create a new article</a>
+  <p> </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Article</th>
+        <th>Created at</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+      <tr>
+        <td style="padding: 10px"><%= article.title %></td>
+        <td style="padding: 10px"><%= article.created_at %></td>
+        <td style="padding: 10px"><p>placeholder</p></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

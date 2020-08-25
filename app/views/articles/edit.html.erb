@@ -1,4 +1,4 @@
-<% @head = "Create Article - " %>
+<% @head = "Edit Article - " %>
 <div class="arial">
   <h1>New Article</h1>
   <% if @article.errors.any? %>
@@ -9,7 +9,7 @@
       <% end %>
     </ul>
   <% end %>
-  <%= form_with scope: :article, url: articles_path, local: true do |f| %>
+  <%= form_with(model: @article, local: true) do |f| %>
     <p>
       <%= f.label :title %><br/>
       <%= f.text_field :title %>

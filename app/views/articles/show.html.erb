@@ -1,3 +1,8 @@
 <% @head = @article.title + " - " %>
-<h1 class="arial"> <%= @article.title %> </h1>
-<p class="arial"> <%= @article.description %> </p>
+<div class="arial">
+  <%= link_to 'Edit', edit_article_path %> |
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?" } %> |
+  <%= link_to 'Back to articles', articles_path %>
+  <h1> <%= @article.title %> </h1>
+  <p> <%= @article.description %> </p>
+</div>

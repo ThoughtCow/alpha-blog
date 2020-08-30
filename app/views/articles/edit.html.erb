@@ -1,25 +1,29 @@
 <% @head = "Edit Article - " %>
-<div class="arial">
-  <h1>New Article</h1>
-  <% if @article.errors.any? %>
-  <p style="color: red">Your article couldn't save because of the following errors:</p>
-    <ul style="color: red">
-      <% @article.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <%= form_with(model: @article, local: true) do |f| %>
-    <p>
-      <%= f.label :title %><br/>
-      <%= f.text_field :title %>
-    </p>
-    <p>
-      <%= f.label :description %><br/>
-        <%= f.text_area :description %>
-    </p>
-    <p>
-    <%= f.submit %>
-    </p>
-  <% end %>
+<div class="topnav">
+  <a class="active" href="https://maya-dog-walking.herokuapp.com/">Home</a>
+  <a href="https://maya-dog-walking.herokuapp.com/availablity">Availablity</a>
+  <a href="https://maya-dog-walking.herokuapp.com/details">Details</a>
+  <a href="https://maya-dog-walking.herokuapp.com/articles">Articles</a>
 </div>
+<h1>Edit Article</h1>
+<% if @article.errors.any? %>
+<p style="color: red">Your article couldn't save because of the following errors:</p>
+  <ul style="color: red">
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with(model: @article, local: true) do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+      <%= f.text_area :description %>
+  </p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>

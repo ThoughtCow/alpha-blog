@@ -1,6 +1,10 @@
 <% @head = "Create Article - " %>
-<div class="arial">
-  <h1>New Article</h1>
-    <%= render 'form'  %>
-  <%= link_to 'Cancel and go back to articles', articles_path, data: { confirm: "Are you sure you want to lose this data and return to articles page?" } %>
+<div class="topnav">
+  <a class="active" href="https://maya-dog-walking.herokuapp.com/">Home</a>
+  <a href="https://maya-dog-walking.herokuapp.com/availablity">Availablity</a>
+  <a href="https://maya-dog-walking.herokuapp.com/details">Details</a>
+  <a href="https://maya-dog-walking.herokuapp.com/articles">Articles</a>
 </div>
+<h1>New Article</h1>
+  <%= render 'form'  %>
+<%= link_to 'Cancel and go back to articles', articles_path, data: { confirm: "Are you sure you want to lose this data and return to articles page?" } %>
